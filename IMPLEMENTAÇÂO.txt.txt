@@ -1,0 +1,45 @@
+Para programar o Windows para executar o programa Python todos os dias às X horas, você pode seguir estes passos:
+
+Passo 1: Salve o arquivo main.py em um diretório de sua escolha.
+
+Passo 2: Criar um arquivo de lote (.bat)
+Em seguida, crie um arquivo de lote (.bat) que será responsável por chamar o interpretador Python com o seu script. 
+Abra o Bloco de Notas ou outro editor de texto e cole o seguinte:
+
+@echo off
+python C:\caminho\para\seu\arquivo\meu_programa.py
+
+Substitua C:\caminho\para\seu\arquivo\meu_programa.py pelo caminho completo onde você salvou o arquivo main.py.
+
+Salve este arquivo com uma extensão .bat, por exemplo, executar_programa.bat.
+
+Passo 3: Agendar a tarefa no Agendador de Tarefas do Windows
+Agora, você precisa configurar o Agendador de Tarefas para executar este arquivo .bat diariamente às x horas:
+
+Abrir o Agendador de Tarefas:
+
+Pressione Win + R, digite taskschd.msc e pressione Enter.
+Criar uma nova tarefa:
+
+No painel direito, clique em "Criar Tarefa...".
+Configurar a tarefa:
+
+Na guia "Geral":
+Dê um nome para a tarefa, como "Executar programa Python diariamente".
+Marque a opção "Executar com as permissões mais altas".
+Configure para "Executar independentemente do usuário estar conectado".
+Na guia "Acionadores":
+Clique em "Novo..." para adicionar um novo acionador.
+Escolha "Diariamente".
+Especifique a data de início e a hora de início (9:00).
+Marque a opção "Repetir a cada 1 dia".
+Na guia "Ações":
+Clique em "Novo..." para adicionar uma nova ação.
+Escolha "Iniciar um programa".
+Navegue até o arquivo .bat que você criou anteriormente (executar_programa.bat).
+Configurações adicionais:
+
+Nas outras guias (Condições, Configurações), configure conforme necessário (por exemplo, ignorar se o computador estiver em bateria, etc.).
+Salvar a tarefa:
+
+Clique em "OK" para salvar a tarefa.
